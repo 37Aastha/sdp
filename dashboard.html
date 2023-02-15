@@ -1,0 +1,157 @@
+{% load static %}
+<!Doctype HTML>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{% static 'css/dashstyle.css' %}" type="text/css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<style>
+	.box{
+		border-radius: 4%;
+	}
+	.box-8{border-radius: 2%;}
+</style>
+<body>
+		
+	<div id="mySidenav" class="sidenav">
+	    <p class="logo"><img src="static/img/Om-chasma.png" class="pro-img" /></p>
+        <a href="" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashboard</a>
+	    <a href="{% url 'CustomerList' %}"class="icon-a"><i class="fa fa-users icons"></i>   Customer</a>
+	    <a href="{% url 'ProductList' %}"class="icon-a"><i class="fa fa-list icons"></i>   Products</a>
+	    <a href="{% url 'OrderList' %}"class="icon-a"><i class="fa fa-shopping-bag icons"></i>   Orders</a>
+	    <a href="{% url 'CategoryList' %}"class="icon-a"><i class="fa fa-tasks icons"></i>   Categories</a>
+		<a href="" class="icon-a"><i class="fa fa-wrench" aria-hidden="true"></i>	Settings</a>
+	</div>
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+	            <span style="font-size:30px;cursor:pointer; color: black;" class="nav"  ><b>☰ Dashboard</b></span>
+	        </div>
+		
+		    <div class="col-div-6">
+		        <div class="profile"></div>
+	        </div>
+		<div class="clearfix"></div>
+        </div>
+
+		<div class="clearfix"></div>
+		<br/>
+		
+		<div class="col-div-3">
+			<div class="box">
+				<p>67<br/><span style="border-radius: 12%">Customers</span></p>
+				<i class="fa fa-users box-icon"></i>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>88<br/><span>Products</span></p>
+				<i class="fa fa-list box-icon"></i>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>99<br/><span>Orders</span></p>
+				<i class="fa fa-shopping-bag box-icon"></i>
+			</div>
+		</div>
+		<div class="col-div-3">
+			<div class="box">
+				<p>78<br/><span>Categories</span></p>
+				<i class="fa fa-tasks box-icon"></i>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		<br/><br/>
+		<div class="col-div-8">
+			<div class="box-8">
+			<div class="content-box">
+				<table>
+	  <tr>
+	    <th>Titles</th>
+		<th>Actions</th>
+	  </tr>
+	  <tr>
+	    <td>Customer</td>
+	    <td>  
+            <span style="background-color:white">
+				<a href="{% url 'CustomerAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	  <tr>
+	    <td>Products</td>
+        <td> 
+			<span style="background-color:white">
+				<a href="{% url 'ProductAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+           </td>
+	  </tr>
+	  <tr>
+	    <td>Orders</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'OrderAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+		</td>
+	  </tr>
+	  <tr>
+	    <td>Categories</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'CategoryAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	  {% comment %} <tr>
+	    <td>Employees</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'EmployeeAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	  <tr>
+	    <td>Color</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'ColorAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	  <tr>
+	    <td>Customer Details</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'CustomerdetailsAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	  <tr>
+	    <td>Order Details</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'OrderdetailsAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr>
+	   <tr>
+	    <td>Payment</td>
+        <td> 
+            <span style="background-color:white">
+				<a href="{% url 'PaymentAdd' %}" class="btn btn-warning btn-sm">Add</a>
+			</span>
+        </td>
+	  </tr> {% endcomment %}
+	</table>
+			</div>
+		</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+</body>
+</html>
