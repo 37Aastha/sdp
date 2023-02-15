@@ -1,0 +1,194 @@
+body{
+    background-size: cover;
+    background-position: cover; 
+    background-color: #103962;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+}
+.container h1{
+    text-align: center;
+    color: black;
+    width: 300px;
+    height: 53px;
+    border-bottom: 1px solid black; 
+    
+}
+.container form{
+    padding: 0 30px;
+    box-sizing: border-box; 
+}
+form .txt_field{
+    position: relative ;
+    border-bottom: 2px solid #103962;
+    margin: 30px 0;    
+}
+.txt_field input{
+    width: 100;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #103962;
+    transform: translateY(-2 0%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #103962;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #103962;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 300px;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #103962;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+.Login{  
+    text-align: center; 
+    width: 100%;
+    padding: 8px 0;
+    height: 60px;
+    border: 6px solid;
+    background: #103962;    
+    border-radius: 60px;
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}       
+.Login a{
+    text-decoration: none;
+    color: white;
+}
+
+.Login:hover{
+    border-color: #103962;
+    transition: .5s;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #103962;
+    border: #103962;
+}
+.line::before{
+    content: 'OR';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #103962;
+    padding: 0 10px;
+}
+.Google{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    height: 45px;
+    width: 145px;
+    background: rgb(255, 0, 0);
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    transition: .5s;
+}
+.Google:hover{
+    background: rgb(209, 36, 16);
+    box-shadow: 0px 0px 10px -2px rgba(122, 122, 122);
+}
+.a{
+    padding: 15px;
+    font-size: 23px;
+    font-weight: 600px;
+    line-height: 10px;
+    color: white;
+    text-decoration: none;
+}
+.Facebook{
+    position: relative;
+    top: -25px;
+    left: 170px;    
+    height: 45px;
+    width: 150px;
+    background:#103962;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    transition: .5s;
+}  
+.Facebook:hover{
+    background: #103962;
+} 
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+.signup_link a{
+    color:#103962;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
+.option {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 15px;
+    color: #103962;
+    background-color: #eee;
+    border-radius: 5px;
+}
+.area_field {
+  width:200px;
+  height: 90px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  border: 2px solid #103962;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: both;
+}
+.date_field{
+    color: #103962;
+}

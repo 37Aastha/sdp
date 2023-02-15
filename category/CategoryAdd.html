@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Add Category</h1>
+      <form method="POST" action="/Category1/" class="form-1  my-4">
+        {% csrf_token %}
+        <div>
+          <div class="txt_field">
+            <input type="text" name="cat_name" required />
+            <label for="cat_name">Category Name</label>
+            <span></span>
+          </div>
+        </div>
+          <div class="Submit">
+            <input type="Submit" value="Submit" href="/index.html" required />
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

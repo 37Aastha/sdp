@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Add Color</h1>
+      <form method="POST" action="/Color11/" class="form-1  my-4">
+        {% csrf_token %}
+        <div>
+          <div class="dropdown">
+            <label for=""style="font-size: large; color:#aaa;">Product:</label>
+            <select name="pid" class="option">
+                {% for p in cpro11%}
+                <option value="{{p.p_id}}">{{p.p_name}}</option>
+                {%endfor%}
+            </select>
+        </div><br>
+          <div class="txt_field">
+            <input type="text" name="name" required />
+            <label for="name"> Name</label>
+            <span></span>
+          </div>
+          <div class="txt_field">
+            <input type="text" name="code" required />
+            <label for="code">Code</label>
+            <span></span>
+          </div>
+        </div>
+          <div class="Submit">
+            <input type="Submit" value="Submit" href="/index.html" required />
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

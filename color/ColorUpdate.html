@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Update Color</h1>
+      <form method="POST" action="/ColorUpdate/{{colorsedit.color_id}}/">
+        {% csrf_token %}
+        <div>
+          <div class="dropdown">
+            <label for=""style="font-size: large; color:#aaa;">Product:</label>
+            <select name="p_id" class="option">
+                {% for p1 in cpro11%}
+                <option value="{{p1.p_id}}">{{p1.p_name}}</option>
+                {%endfor%}
+            </select>
+        </div><br>
+          <div class="txt_field">
+            <input type="text" value="{{colorsedit.name}}" name="name" required />
+            <span></span>
+            <label> Name</label>
+          </div>
+          <div class="txt_field">
+            <input type="text" value="{{colorsedit.code}}" name="code" required />
+            <span></span>
+            <label> Code</label>
+          </div>
+          <div>
+            <button type="Submit" class="Login" value="add" >Submit</button>  
+        </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

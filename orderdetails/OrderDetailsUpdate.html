@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order details</title>
+    <link rel="stylesheet" href="{% static 'css/Forms.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <Form method="post" action="/OrderdetailsUpdate/{{oedit11.od_id}}/">
+            {% csrf_token %}
+            <h1>Order Details</h1>
+            <div>
+                <div class="dropdown">
+                    <label for=""style="font-size: large; color:#aaa;">Order:</label>
+                    <select name="oid"class="option">
+                        {% for op1 in opay11 %}
+                        <option value="{{op1.o_id}}">{{op1.o_id}}</option>
+                        {%endfor%}
+                    </select>
+                </div><br>
+                <div class="dropdown">
+                    <label for=""style="font-size: large; color:#aaa;">Product:</label>
+                    <select name="pid" class="option">
+                        {% for cp1 in ppay11 %}
+                        <option value="{{cp1.p_id}}">{{cp1.p_name}}</option>
+                        {%endfor%}
+                    </select>
+                </div><br>
+                <div class="date_field">
+                    <label>Price</label>
+                    <input type="number" value="{{oedit11.price}}" name="price" required>
+                </div><br>
+                <div class="date_field">
+                    <label>Quantity</label>
+                    <input type="number" value="{{oedit11.quantity}}" name="quantity" required>
+                </div><br>
+                <div class="txt_field">
+                    <input type="text" value="{{oedit11.discount}}" name="discount" required>
+                    <span></span>
+                    <label>Discount</label>
+                </div>
+                
+            </div>
+            <div>
+                <button type="Submit" class="Login" value="add" >Submit</button> 
+    
+            </div>
+        </Form>
+    </div>
+</body>
+</html>

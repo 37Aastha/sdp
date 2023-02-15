@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Update Customer Details</h1>
+      <form method="POST" action="/Update_Customerdetails/{{customerdetailssedit.cd_id}}/">
+        {% csrf_token %}
+        <div>
+          <div class="txt_field">
+            <input type="text" value="{{customerdetailssedit.age}}" name="age" required />
+            <span></span>
+            <label>Age</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="text" value="{{customerdetailssedit.gender}}" name="gender" required />
+            <span></span>
+            <label>Gender</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="date" value="{{customerdetailssedit.dob}}" name="dob" required />
+            <span></span>
+            <label></label>
+          </div>
+
+          <div class="txt_field">
+            <input type="text" value="{{customerdetailssedit.address}}" name="address" required />
+            <span></span>
+            <label>Address</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="number" value="{{customerdetailssedit.zip}}" name="zip" required />
+            <span></span>
+            <label>Zip</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="password" value="{{employeesedit.password}}" name="Password" required />
+            <span></span>
+            <label>Set Password</label>
+          </div>
+
+          <div class="Submit">
+            <input type="Submit"  value="add" href="/index.html" required />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="{% static 'css/addproduct.css' %} " />
+</head>
+<body>
+    <div class="container">
+        <Form method="post" action="/ProductUpdate/{{proedit1.p_id}}/">
+            {% csrf_token %}
+            <h1>Product</h1>
+            <div class="product">
+                <div class="txt_field">
+                    <input type="text" value="{{proedit1.p_name}}" name="name" required>
+                    <span></span>
+                    <label>Name</label>
+                </div>
+                <div>
+                    <label>Description</label><br>
+                    <textarea name="desc"  class="area_field" placeholder="Write Somehing.." id="" cols="15" rows="2">{{proedit1.p_desc}}</textarea>
+                </div>
+                <div class="txt_field">
+                    <input type="text" value="{{proedit1.p_price}}" name="price" required>
+                    <span></span>
+                    <label>Price</label>
+                </div> 
+
+            </div>
+            <div>
+                <button type="Submit" class="Login" value="add" >Submit</button>  
+            </div>
+        </Form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Update Customer</h1>
+      <form method="POST" action="/Update_Customer/{{customersedit.c_id}}/">
+        {% csrf_token %}
+        <div>
+          <div class="txt_field">
+            <input type="text" value="{{customersedit.first_name}}" name="First_Name" required />
+            <span></span>
+            <label>First Name</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="text" value="{{customersedit.last_name}}" name="Last_Name" required />
+            <span></span>
+            <label>Last Name</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="" value="{{customersedit.number}}" name="Number" required />
+            <span></span>
+            <label>Mobile Number</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="" value="{{customersedit.email}}" name="Email" required />
+            <span></span>
+            <label>Email Id</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="password" value="{{customersedit.password}}" name="Password" required />
+            <span></span>
+            <label>Set Password</label>
+          </div>
+
+          <div class="Submit">
+            <input type="Submit"  value="add" href="/index.html" required />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

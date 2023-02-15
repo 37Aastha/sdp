@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="{% static 'css/Forms.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <Form method="post" action="/OrderUpdate/{{oedit1.o_id}}/">
+            {% csrf_token %}
+            <h1>Order</h1>
+            <div>
+                <div class="dropdown">
+                    <label for=""style="font-size: large; color:#aaa;">Customer:</label>
+                    <select name="cid" class="option">
+                        {% for c1 in ocust11%}
+                        <option value="{{c1.c_id}}">{{c1.first_name}}</option>
+                        {%endfor%}
+                    </select>
+                </div><br>
+                <div class="txt_field">
+                    <input type="text" value="{{oedit1.total_sum}}" name="total_sum" required>
+                    <span></span>
+                    <label>Rate</label>
+                </div>
+                <div class="txt_field">
+                    <input type="date" value="{{oedit1.date}}" name="date" required>
+                    <span></span>
+                    <label>Date</label>
+                </div>
+                <div class="txt_field">
+                    <label>Pay Method</label>
+                    <input type="text" value="{{oedit1.pay_method}}" name="pay_method" required>
+                </div><br><br>  
+            </div>
+            <div>
+                <button type="Submit" class="Login" value="add" >Submit</button>  
+            </div>
+        </Form>
+    </div>
+</body>
+</html>

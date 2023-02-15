@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{% static 'CSS/Forms.css' %} " />
+</head>
+<body>
+    <div class="container">
+        <Form method="post" action="/Orderdetails1/">
+            {% csrf_token %}
+            <h1>Order Details</h1>
+            <div>
+                <div class="dropdown">
+                    <label for=""style="font-size: large; color:#aaa;">Order:</label>
+                    <select name="oid" class="option">
+                        {% for op in opay1 %}
+                        <option value="{{op.o_id}}">{{op.date}}</option>
+                        {%endfor%}
+                    </select>
+                </div><br>
+                <div class="dropdown">
+                    <label for=""style="font-size: large; color:#aaa;">Product:</label>
+                    <select name="pid" class="option">
+                        {% for cp in ppay1 %}
+                        <option value="{{cp.p_id}}">{{cp.p_name}}</option>
+                        {%endfor%}
+                    </select>
+                </div><br>
+               <br>             
+                <div class="txt_field">
+                    <input type="text" name="price" required>
+                    <span></span>
+                    <label>Total Amount</label>
+                </div>
+                <br>                
+                <div class="date_field">
+                    <label>Quantity</label>
+                    <input type="number" name="quantity" required>
+                </div><br>
+                <div class="date_field">
+                    <label>Discount</label>
+                    <input type="number" name="discount" required>
+                </div><br>
+            </div>
+            <div>
+                <button type="Submit" class="Login"value="add" >Submit</button> 
+            </div>
+        </Form>
+    </div>
+</body>
+</html>

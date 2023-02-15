@@ -1,0 +1,160 @@
+body{
+    font-family:'Franklin Gothic Medium';
+    background-size: cover;
+    background-position: cover; 
+    background-color: #103962;
+}
+.container{
+    position: relative;
+    top: 390px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+}
+.container h1{
+    text-align: center;
+    position: absolute;
+    color: #103962;
+    width: 640px;
+    height: px;
+    border-bottom: 1px solid #103962; 
+    
+}
+.container form{
+    font-family:'Franklin Gothic Medium';
+
+    padding: 0 30px;
+    box-sizing: border-box; 
+}
+form .txt_field{
+    position: relative ;
+    border-bottom: 2px solid #aaa;
+    margin: 30px 0;    
+}
+.txt_field input{
+    width: 100;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #aaa;
+    transform: translateY(-2 0%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #103962;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #103962;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 208px;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #103962;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+.Login{  
+    text-align: center; 
+    position: relative;
+    left: 200px;
+    top: -20px;
+    width: 250px;
+    padding: 8px 0;
+    height: 55px;
+    border: 6px solid;
+    background: #103962;    
+    border-radius: 60px;
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}       
+.Login a{
+    text-decoration: none;
+    color: white;
+}
+
+.Login:hover{
+    border-color: #103962;
+    transition: .5s;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #aaa;
+    border: #aaa;
+}
+.line::before{
+    content: 'OR';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #232836;
+    padding: 0 10px;
+}
+.option {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 15px;
+    color: #103962;
+    background-color: #eee;
+    border-radius: 5px;
+}
+.area_field {
+  width: 489px;
+  height: 70px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: both;
+}
+.date_field{
+    color: #103962;
+}
+.color_field{
+    position: relative;
+    top: 40px;
+    left: -120px;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px ;
+}

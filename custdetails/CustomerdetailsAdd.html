@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add | Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Add Customer Details</h1>
+      <form method="POST" action="/customerdetails1/" class="form-1  my-4">
+        {% csrf_token %}
+        <div>
+          <div class="txt_field">
+            <input type="number" name="age" required />
+            <label for="age">Age</label>
+            <span></span>
+          </div>
+
+          <div>
+            <div class="txt_field">
+              <input type="text" name="gender" required />
+              <label>Gender</label>
+              <span></span>
+            </div>
+
+            <div class="txt_field">
+                <input type="date" name="dob" required />
+                <label></label>
+                <span></span>
+              </div>
+
+          <div class="txt_field">
+            <input type="text" name="address" required />
+            <label>Address</label>
+            <span></span>
+          </div>
+
+          <div class="txt_field">
+            <input type="number" name="zip" required />
+            <label>Zip</label>
+            <span></span>
+          </div>
+          </div>
+          <div class="Submit">
+            <input type="Submit" value="Submit" href="/index.html" required />
+          </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
